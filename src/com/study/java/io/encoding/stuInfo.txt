@@ -1,0 +1,4 @@
+StudentInfo [name=zhaoliu, ma=78, cn=90, en=99]	267
+StudentInfo [name=zhangsan, ma=23, cn=12, en=56]	91
+StudentInfo [name=wangwu, ma=56, cn=89, en=90]	235
+StudentInfo [name=lisi, ma=45, cn=89, en=76]	210
