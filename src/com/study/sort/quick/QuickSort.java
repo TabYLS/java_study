@@ -33,7 +33,7 @@ public class QuickSort {
 		int i = low;
 		int j = high;
 		
-		r[0] = r[i];
+		r[0] = r[i];//先取左边为支点，就要先扫描右边
 		while(i < j) {//每一轮都要比较每一个元素
 			while(i < j && r[j] > r[0])//扫描序列的右端，保证右端的都是大的
 				j --;

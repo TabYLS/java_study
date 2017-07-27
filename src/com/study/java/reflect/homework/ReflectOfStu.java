@@ -42,9 +42,8 @@ public class ReflectOfStu {
 			System.out.println(field.get(stu));
 
 			// 3.利用反射调用show方法
-			Method method = clazz.getDeclaredMethod("show", null);
-			method.invoke(stu, null);
-
+			Method method = clazz.getDeclaredMethod("show");
+			
 			// 4.通过反射绕过泛型检查
 			ArrayList<String> list = new ArrayList<String>();
 			list.add("易阳");

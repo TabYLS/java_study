@@ -4,7 +4,7 @@ package com.study.java.test;
  * Created by YLS on 2017/5/31.
  */
 public class Main {
-
+	
     public static void main(String[] args) {
         Group group = new Group();
         group.setNum(1);
@@ -21,7 +21,6 @@ public class Main {
         System.out.println(person.getName()+"  :"+person.getGroup().getName());
         System.out.println("===========================================");
 
-
         Person p1 = new Person();
         p1.setName("小白。。。。");
         System.out.println("p1:"+p1.getName());
@@ -33,6 +32,5 @@ public class Main {
         		System.out.println("sdflsjd");
         	}
         };
-        
     }
 }
