@@ -4,20 +4,26 @@ import java.util.Arrays;
 
 public class HeapSortDemo {
     public static void main(String []args){
-        int []arr = {12,15,10,11,9,8,7,6,5,4,3,2,1};
+        int []arr ={12,15,10,11,9,8,7,6,5,4,3,2,1};
         sort(arr);
         System.out.println(Arrays.toString(arr));
     }
     public static void sort(int []arr){
         //1.构建大顶堆
         for(int i=arr.length/2-1;i>=0;i--){
-            //从第一个非叶子结点从下至上，从右至左调整结构
+        	/*System.out.println();
+        	System.out.println(i + "=>" + arr[i]);*/
+            //从从下至上的第一个非叶子结点，从右至左调整结构
+        	//System.out.println();
+        	//System.out.println(Arrays.toString(arr));
             adjustHeap(arr,i,arr.length);
         }
+        System.out.println(Arrays.toString(arr));
         //2.调整堆结构+交换堆顶元素与末尾元素
+        System.out.println("\n\n\n\n\n\n");
         for(int j=arr.length-1;j>0;j--){
             swap(arr,0,j);//将堆顶元素与末尾元素进行交换
-            adjustHeap(arr,0,j);//重新对堆进行调整
+            adjustHeap(arr,0,j);//重新对堆进行调整，因为只是交换了两个节点，所以只要对一个节点进行调整就可以了
         }
 
     }
@@ -30,7 +36,9 @@ public class HeapSortDemo {
      */
     public static void adjustHeap(int []arr,int i,int length){
         int temp = arr[i];//先取出当前元素i
-        for(int k=i*2+1;k<length;k=k*2+1){//从i结点的左子结点开始，也就是2i+1处开始
+        for(int k=i*2+1;k<length;k=k*2+1){//从i结点的左子结点开始，也就是2i+1处开始，遍历所有的非叶子节点（k=k*2+1）
+        	/*System.out.println(k + "=>" +arr[k]);
+        	System.out.println(Arrays.toString(arr));*/
             if(k+1<length && arr[k]<arr[k+1]){//如果左子结点小于右子结点，k指向右子结点
                 k++;
             }
@@ -41,7 +49,10 @@ public class HeapSortDemo {
                 break;
             }
         }
+        //System.out.println(Arrays.toString(arr));
         arr[i] = temp;//将temp值放到最终的位置
+       /* System.out.println("========================================="+ i + "    temp="+temp);
+        System.out.println(Arrays.toString(arr));*/
     }
 
     /**
