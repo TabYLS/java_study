@@ -1,4 +1,4 @@
-最好，最坏，平均的时间复杂度都是O(n*log2n)
+最好，最坏，平均的时间复杂度都是O(n*log2n)，不稳定
 空间复杂度是O(1)
 
 说明：参考这个通过图解理解流程http://www.cnblogs.com/chengxiao/p/6129630.html
