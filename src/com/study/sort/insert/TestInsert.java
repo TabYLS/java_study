@@ -11,7 +11,8 @@ import java.util.Arrays;
 public class TestInsert {
 	
 	public static void main(String[] args) {
-		int[] arr = {0,90,56,896,5,48,96,65,8,49,92};
+		//int[] arr = {0,90,56,896,5,48,96,65,8,49,92};
+		int[] arr = {8,9,1,7,2,3,5,4,6,0};
 		InsertSort sort = new InsertSort(arr);
 		sort.sort();
 		System.out.println(Arrays.toString(arr));
